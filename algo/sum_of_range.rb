@@ -3,14 +3,26 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+  if array[0] < array[1]
+   sum_of_range = 0
+   (array[0]..array[1]).each do |number| 
+     sum_of_range += number
+    end
+    return sum_of_range
+  else
+   sum_of_range = 0
+   (array[1]..array[0]).each do |number| 
+     sum_of_range += number
+    end
+    return sum_of_range
+  end
 end
 
 # Driver code - don't touch anything below this line.
 puts "TESTING sum_of_range..."
 puts
 
-result = sum_of_range([1, 4])
+ result = sum_of_range([1, 4])
 
 puts "Your method returned:"
 puts result
@@ -22,7 +34,7 @@ else
   puts "F"
 end
 
-result = sum_of_range([4, 1])
+ result = sum_of_range([4, 1])
 
 puts "Your method returned:"
 puts result

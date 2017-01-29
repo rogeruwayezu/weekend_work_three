@@ -3,14 +3,20 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  mutation = mutation.split('')
+  base_word = base_word.split('')
+  if mutation.all?{|letters| base_word.include?(letters)}
+    return true
+  else
+    return false
+  end
 end
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
 puts
 
-result = mutation?("burly", "ruby")
+ result = mutation?("burly", "ruby")
 
 puts "Your method returned:"
 puts result
