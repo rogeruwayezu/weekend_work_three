@@ -60,4 +60,4 @@ else
 end
 puts
 
-result = tv.
+result = tv.set_channel(5)
